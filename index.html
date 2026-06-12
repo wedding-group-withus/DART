@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ko" class="theme-dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D'ART : THE WEDDING ARCHIVE - 웨딩 AI 프로그램</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="단 하루의 결혼을 넘어, 두 사람의 이야기를 영원히 보관하는 예술 하우스. D'ART: THE WEDDING ARCHIVE. 안양역 엔터식스 8-9층 초대형 베뉴와 맞춤형 웨딩 AI 프로그램을 만나보세요.">
+  <meta name="keywords" content="DART, 디아트, 웨딩홀, 안양웨딩홀, 아카이브홀, 그랜드볼룸, 루이비스컨벤션, 웨딩AI, 안양역엔터식스, 웨딩계산기">
+  <meta property="og:title" content="D'ART : THE WEDDING ARCHIVE">
+  <meta property="og:description" content="단 하루의 결혼을 넘어, 두 사람의 이야기를 영원히 보관하는 예술 하우스. AI 디렉터와 인터랙티브 플래너를 만나보세요.">
+  <meta property="og:type" content="website">
+  
+  <!-- Font Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <span class="logo-main">D'ART</span>
+        <span class="logo-sub">THE WEDDING ARCHIVE</span>
+      </a>
+      
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#ai-director" class="nav-link">AI Director</a>
+        <a href="#spaces" class="nav-link">Spaces</a>
+        <a href="#calculator" class="nav-link">Seat Calculator</a>
+        <a href="#location" class="nav-link">Location</a>
+      </nav>
+      
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="btn-icon" aria-label="테마 전환">
+          <i class="fa-solid fa-moon theme-icon-dark"></i>
+          <i class="fa-solid fa-sun theme-icon-light"></i>
+        </button>
+        <button id="openBookingBtn" class="btn-premium">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>상담예약</span>
+        </button>
+        
+        <!-- Mobile Menu Trigger -->
+        <button id="mobileMenuBtn" class="hamburger-menu" aria-label="메뉴 열기">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Side Drawer -->
+  <div id="mobileDrawer" class="mobile-drawer">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <span class="logo-main">D'ART</span>
+      </div>
+      <button id="closeDrawerBtn" class="btn-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav class="drawer-menu">
+      <a href="#hero" class="drawer-link">Home</a>
+      <a href="#ai-director" class="drawer-link">AI Director</a>
+      <a href="#spaces" class="drawer-link">Spaces</a>
+      <a href="#calculator" class="drawer-link">Seat Calculator</a>
+      <a href="#location" class="drawer-link">Location</a>
+      <hr class="drawer-divider">
+      <button id="drawerBookingBtn" class="btn-premium w-full mt-4">
+        <i class="fa-regular fa-calendar-check"></i>
+        <span>상담예약</span>
+      </button>
+    </nav>
+  </div>
+  <div id="drawerOverlay" class="drawer-overlay"></div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="brand-slogan-eng fade-in">
+        <span class="slogan-line-1">From Routine</span>
+        <span class="slogan-line-2">To Masterpiece</span>
+      </div>
+      <h1 class="hero-title fade-in-delay-1">두 사람의 성혼을 기록하는 예술 하우스</h1>
+      <p class="hero-description fade-in-delay-2">
+        단 하루의 일반적인 예식이 아닌, 흘러가는 일상(Routine)에서 영원한 예술(Masterpiece)로 남을 두 사람만의 소중한 기록을 아카이브합니다.
+      </p>
+      <div class="hero-cta fade-in-delay-3">
+        <a href="#ai-director" class="btn-outline">AI 디렉팅 체험하기</a>
+        <a href="#calculator" class="btn-filled">웨딩 설계 시작</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span class="scroll-text">EXPLORE</span>
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Container -->
+  <main class="main-content">
+
+    <!-- Section 1: AI Wedding Director -->
+    <section id="ai-director" class="section-container">
+      <div class="section-header">
+        <span class="section-tagline">AI WEDDING DIRECTOR</span>
+        <h2 class="section-title">AI 웨딩 디렉터</h2>
+        <div class="title-underline"></div>
+        <p class="section-desc">두 분의 고유한 스토리를 입력해 주시면, D'ART의 공간감과 예술적 무드를 반영한 독창적인 웨딩 테마 및 기획서 시안을 실시간으로 설계합니다.</p>
+      </div>
+
+      <div class="grid-layout cols-2 ai-grid">
+        <!-- Form Column -->
+        <div class="card glass-card form-card">
+          <h3 class="card-title"><i class="fa-solid fa-wand-magic-sparkles text-bronze"></i> 스토리 아카이빙</h3>
+          <p class="card-subtitle">두 사람의 일상적인 만남이 예술적 정점으로 피어날 수 있도록 기본 정보를 들려주세요.</p>
+          
+          <form id="aiDirectorForm" class="elegant-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="groomName">신랑 성함</label>
+                <input type="text" id="groomName" placeholder="예: 이민우" required>
+              </div>
+              <div class="form-group">
+                <label for="brideName">신부 성함</label>
+                <input type="text" id="brideName" placeholder="예: 김지아" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="loveStory">두 분만의 러브 스토리 & 가치관</label>
+              <textarea id="loveStory" rows="4" placeholder="예: 대학교 동아리에서 만나 매 주말 함께 책을 읽고 커피를 마시며 자라난 커플입니다. 화려함보다는 깊이 있고 소박하되 가치 있는 예술적인 순간들을 소중히 여깁니다." required></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>선호하는 공간 무드</label>
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input type="radio" name="weddingMood" value="theatrical" checked>
+                  <span class="radio-custom"></span>
+                  <span class="radio-text">극적 몰입 (Theatrical Matte Black)</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="weddingMood" value="architectural">
+                  <span class="radio-custom"></span>
+                  <span class="radio-text">건축학적 우아함 (Architectural Marble)</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="weddingMood" value="luminous">
+                  <span class="radio-custom"></span>
+                  <span class="radio-text">빛의 명작 (Luminous Chiffon)</span>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-premium w-full py-4 mt-2">
+              <i class="fa-solid fa-magnifying-glass-chart"></i>
+              <span>AI 분석 및 연출 제안서 생성</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Result Column (Pre-generation placeholder & post-generation results) -->
+        <div class="card glass-card result-card" id="aiResultCard">
+          <!-- Placeholder State -->
+          <div id="aiPlaceholderState" class="result-placeholder">
+            <div class="pulsing-circle">
+              <i class="fa-solid fa-fingerprint"></i>
+            </div>
+            <h4>스토리를 분석하여 마스터피스를 탄생시킵니다</h4>
+            <p>좌측 양식을 채운 뒤 생성 버튼을 클릭해 주세요. 기하학적인 우아함과 두 분만의 가치가 녹아든 독자적인 연출 제안서가 이곳에 시각화됩니다.</p>
+          </div>
+
+          <!-- Loading State -->
+          <div id="aiLoadingState" class="result-loading d-none">
+            <div class="spinner"></div>
+            <h4>D'ART ARCHIVE 생성 중</h4>
+            <p>입력해주신 기억(Routine)을 한 편의 예술(Masterpiece)로 기록하고 있습니다...</p>
+          </div>
+
+          <!-- Generated Content State -->
+          <div id="aiOutputState" class="result-output d-none">
+            <div class="output-header">
+              <span class="brand-tag">D'ART ARCHIVE EXCLUSIVE</span>
+              <button id="btnShareInvite" class="btn-icon-small" title="공유하기"><i class="fa-solid fa-share-nodes"></i></button>
+            </div>
+            
+            <div class="digital-invitation">
+              <!-- Invitation Header -->
+              <div class="invite-header">
+                <div class="invite-logo">D'ART</div>
+                <div class="invite-slogan" id="outSlogan">FROM ROUTINE TO MASTERPIECE</div>
+                <div class="invite-names" id="outNames">이민우 & 김지아</div>
+              </div>
+              
+              <!-- Vows & Story Section -->
+              <div class="invite-section">
+                <h4 class="invite-sec-title">성혼 서사 아카이브 (Wedding Vows)</h4>
+                <p class="invite-poetry" id="outVows">
+                  일상의 사소함 속에 깃든 두 사람의 약속이<br>
+                  이제 아카이브의 웅장한 천장 아래 빛으로 차오릅니다.<br>
+                  서로의 페이지를 마주하며 영원히 기억될 명작을 시작합니다.
+                </p>
+              </div>
+
+              <!-- Venue Styling Section -->
+              <div class="invite-section">
+                <h4 class="invite-sec-title">아카이브 전용 공간 연출 기획 (Styling Spec)</h4>
+                <ul class="invite-specs">
+                  <li>
+                    <span class="spec-label">32m 버진로드 연출</span>
+                    <span class="spec-val" id="outSpecVirgin">은은한 캔들 라이트와 흐드러지는 안개꽃 장식으로 예술적 산책로 구현</span>
+                  </li>
+                  <li>
+                    <span class="spec-label">9m 천장 샹들리에</span>
+                    <span class="spec-val" id="outSpecCeiling">기하학적 크리스탈에 패딩 라이트를 믹스하여 드라마틱한 잔영 연출</span>
+                  </li>
+                  <li>
+                    <span class="spec-label">식탁 디자인 및 음악</span>
+                    <span class="spec-val" id="outSpecTables">묵직한 리넨과 브론즈 촛대 세팅, 현악 4중주의 어쿠스틱 라이브 선율</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="invite-footer">
+                <p>THE ARCHIVE : GRAND BALLROOM</p>
+                <small>안양역 엔터식스 8F-9F</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Space Showcase -->
+    <section id="spaces" class="section-container bg-subtle-overlay">
+      <div class="section-header">
+        <span class="section-tagline">THE ARCHITECTURAL BEAUTY</span>
+        <h2 class="section-title">D'ART 독점 공간 정보</h2>
+        <div class="title-underline"></div>
+        <p class="section-desc">기하학적 정교함과 무한한 공간감을 자랑하는 하이엔드 공간 스펙을 소개합니다.</p>
+      </div>
+
+      <div class="grid-layout cols-2 space-grid">
+        <!-- Hall Card -->
+        <div class="card space-card glass-card">
+          <div class="space-img-wrapper">
+            <!-- Slideshow for Ballroom -->
+            <div class="slideshow-container">
+              <img src="assets/grand_ballroom_1.jpg" alt="THE ARCHIVE : GRAND BALLROOM 1" class="space-img slide active">
+              <img src="assets/grand_ballroom_2.jpg" alt="THE ARCHIVE : GRAND BALLROOM 2" class="space-img slide">
+              <div class="slideshow-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+              </div>
+            </div>
+            <div class="space-badge">8층-9층 단독 베뉴</div>
+          </div>
+          <div class="space-info">
+            <h3 class="space-title">아카이브 (그랜드볼룸)</h3>
+            <p class="space-subtitle">압도적인 무대의 건축미</p>
+            <p class="space-text">
+              무한한 공간감과 정교한 기하학적 천장 샹들리에 연출, 매트한 블랙&화이트 인테리어와 조명이 빚어내는 연출은 한 편의 연극과도 같은 정점의 예술적 몰입감을 선사합니다.
+            </p>
+            <div class="space-specs-grid">
+              <div class="space-spec-item">
+                <i class="fa-solid fa-chair"></i>
+                <span><strong>좌석:</strong> 300석</span>
+              </div>
+              <div class="space-spec-item">
+                <i class="fa-solid fa-road"></i>
+                <span><strong>버진로드:</strong> 32미터</span>
+              </div>
+              <div class="space-spec-item">
+                <i class="fa-solid fa-arrows-up-down"></i>
+                <span><strong>층고:</strong> 9미터 (초대형 베뉴)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bridal Lounge Card -->
+        <div class="card space-card glass-card">
+          <div class="space-img-wrapper">
+            <img src="assets/bridal_lounge.jpg" alt="THE BRIDAL LOUNGE" class="space-img">
+            <div class="space-badge">8층 연결 통로</div>
+          </div>
+          <div class="space-info">
+            <h3 class="space-title">신부 대기실 (THE BRIDAL LOUNGE)</h3>
+            <p class="space-subtitle">우아함과 사적 감성의 공존</p>
+            <p class="space-text">
+              정갈한 화이트 마블과 브론즈 메탈 라인의 조화. 와이드 레이아웃 공간 속에 파인 다이닝 무드의 긴 테이블을 배치하여 프라이빗 쇼룸을 연상시키는 감도 높은 디렉팅을 제공합니다.
+            </p>
+            <div class="space-specs-grid">
+              <div class="space-spec-item">
+                <i class="fa-solid fa-gem"></i>
+                <span><strong>조명:</strong> 크리스털 샹들리에</span>
+              </div>
+              <div class="space-spec-item">
+                <i class="fa-solid fa-utensils"></i>
+                <span><strong>테이블:</strong> 프라이빗 다이닝 스위트</span>
+              </div>
+              <div class="space-spec-item">
+                <i class="fa-solid fa-wind"></i>
+                <span><strong>패브릭:</strong> 고급 시폰 & 플라워</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Interactive Guest Calculator -->
+    <section id="calculator" class="section-container">
+      <div class="section-header">
+        <span class="section-tagline">SMART VENUE PLANNING</span>
+        <h2 class="section-title">실시간 하객 및 베뉴 설계기</h2>
+        <div class="title-underline"></div>
+        <p class="section-desc">예상하시는 하객 수에 따라 공간 레이아웃 배치, 900석 대연회장 활용도 및 주차 공간의 쾌적도를 지능적으로 계산하여 제안합니다.</p>
+      </div>
+
+      <div class="card glass-card calc-card">
+        <div class="calc-control-group">
+          <label for="guestSlider" class="slider-label">
+            <span>예상 하객 수 선택</span>
+            <span class="guest-count-badge" id="guestCountBadge">300 명</span>
+          </label>
+          <div class="slider-wrapper">
+            <button class="slider-btn" id="btnMinusGuest"><i class="fa-solid fa-minus"></i></button>
+            <input type="range" id="guestSlider" min="100" max="900" step="10" value="300">
+            <button class="slider-btn" id="btnPlusGuest"><i class="fa-solid fa-plus"></i></button>
+          </div>
+        </div>
+
+        <div class="grid-layout cols-3 calc-results">
+          <!-- Table Allocation -->
+          <div class="calc-result-item">
+            <div class="calc-icon"><i class="fa-solid fa-border-all"></i></div>
+            <h4 class="calc-item-title">그랜드볼룸 레이아웃</h4>
+            <div class="calc-item-val" id="valBallroomTables">30 테이블</div>
+            <p class="calc-item-desc" id="valBallroomDesc">홀 내부(300석) 만석 배치 완료.</p>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" id="pbBallroom" style="width: 100%;"></div>
+            </div>
+          </div>
+
+          <!-- Banquet occupancy -->
+          <div class="calc-result-item">
+            <div class="calc-icon"><i class="fa-solid fa-wine-glass"></i></div>
+            <h4 class="calc-item-title">900석 연회장 점유율</h4>
+            <div class="calc-item-val" id="valBanquetRate">33.3%</div>
+            <p class="calc-item-desc">안양 최대규모 연회장(900석) 보유로<br>매우 여유롭고 쾌적한 식사를 제공합니다.</p>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" id="pbBanquet" style="width: 33.3%;"></div>
+            </div>
+          </div>
+
+          <!-- Parking occupancy -->
+          <div class="calc-result-item">
+            <div class="calc-icon"><i class="fa-solid fa-square-parking"></i></div>
+            <h4 class="calc-item-title">주차 공간 예상 점유율</h4>
+            <div class="calc-item-val" id="valParkingRate">35.0%</div>
+            <p class="calc-item-desc">최대 1000대+ 단일건물 주차타워로<br>동시간대 하객 차량을 완벽하게 수용합니다.</p>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" id="pbParking" style="width: 35.0%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Location & Map -->
+    <section id="location" class="section-container bg-subtle-overlay">
+      <div class="section-header">
+        <span class="section-tagline">CONVENIENT ACCESSIBILITY</span>
+        <h2 class="section-title">오시는 길 & 위치 정보</h2>
+        <div class="title-underline"></div>
+        <p class="section-desc">하객분들께서 헤매지 않고 편안하게 발걸음을 옮기실 수 있도록 안내해 드립니다.</p>
+      </div>
+
+      <div class="grid-layout cols-2 location-grid">
+        <!-- Location details -->
+        <div class="card glass-card info-card">
+          <div class="location-header">
+            <i class="fa-solid fa-map-pin text-bronze"></i>
+            <div>
+              <h3>D'ART THE WEDDING ARCHIVE</h3>
+              <p>경기 안양시 만안구 만안로 244 (엔터식스 안양역사점)</p>
+            </div>
+          </div>
+          
+          <ul class="location-details-list">
+            <li>
+              <div class="loc-icon-bullet"><i class="fa-solid fa-building"></i></div>
+              <div>
+                <strong>층수 안내</strong>
+                <p>로비 및 아카이브 웨딩홀: 8층 - 9층<br>프라이빗 예약 및 상담실: 6층</p>
+              </div>
+            </li>
+            <li>
+              <div class="loc-icon-bullet"><i class="fa-solid fa-train-subway"></i></div>
+              <div>
+                <strong>대중교통 (지하철 1호선)</strong>
+                <p>안양역사 내에 위치하여 지하철 개찰구 출구와 엔터식스 건물이 직접 연결되어 대중교통 접근성이 안양 최고입니다.</p>
+              </div>
+            </li>
+            <li>
+              <div class="loc-icon-bullet" style="font-family: var(--font-serif); font-weight: 700; font-size: 1.1rem; line-height: 1;">P</div>
+              <div>
+                <strong>주차장 이용 안내</strong>
+                <p>엔터식스 건물 내 통합 주차타워를 이용하며 최대 1000대 이상 수용 가능한 단일건물 초대형 주차 공간이 완비되어 있습니다.</p>
+              </div>
+            </li>
+          </ul>
+
+          <a href="https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%20%EC%95%88%EC%96%91%EC%8B%9C%20%EB%A7%8C%EC%95%88%EA%B5%AC%20%EB%A7%8C%EC%95%88%EB%A1%9C%20244" target="_blank" rel="noopener noreferrer" class="btn-naver-map">
+            <i class="fa-solid fa-location-arrow"></i>
+            <span>네이버 플레이스 내비게이션 연결</span>
+          </a>
+        </div>
+
+        <!-- Interactive Map Mockup -->
+        <div class="card glass-card map-mockup-card">
+          <div class="map-mockup-header">
+            <span><i class="fa-solid fa-map"></i> MAP PREVIEW</span>
+            <span class="map-badge">엔터식스 직결</span>
+          </div>
+          <div class="map-placeholder">
+            <!-- Simulated map with stylized coordinates of Anyang Station Enter6 -->
+            <div class="simulated-map">
+              <div class="map-grid"></div>
+              <div class="map-station-node">
+                <i class="fa-solid fa-train"></i>
+                <span>안양역 (1호선)</span>
+              </div>
+              <div class="map-venue-node pulsing-ring">
+                <div class="node-inner">
+                  <span class="brand-initial">D</span>
+                </div>
+                <div class="node-tooltip">
+                  <strong>D'ART 아카이브 (8-9F)</strong>
+                  <p>상담실은 6F</p>
+                </div>
+              </div>
+              <div class="map-route-line"></div>
+              <div class="map-road-name font-s">만안로 (안양역 광장)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Premium Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2>D'ART</h2>
+        <p>THE WEDDING ARCHIVE</p>
+        <span class="footer-slogan">From Routine To Masterpiece</span>
+      </div>
+      <div class="footer-contact">
+        <p><i class="fa-solid fa-phone"></i> 예약문의: 1544-XXXX</p>
+        <p><i class="fa-solid fa-envelope"></i> info@dartwedding.com</p>
+        <p><i class="fa-solid fa-location-dot"></i> 경기 안양시 만안구 만안로 244 엔터식스 8F-9F</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 D'ART: THE WEDDING ARCHIVE. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Consultation Action Button -->
+  <button id="floatingBookingBtn" class="floating-booking-btn" aria-label="상담 예약 신청">
+    <i class="fa-solid fa-file-signature"></i>
+    <span class="floating-btn-text">간편 상담예약</span>
+  </button>
+
+  <!-- Reservation / Booking Modal -->
+  <div id="bookingModal" class="modal-wrapper">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-container glass-card">
+      <button id="closeBookingBtn" class="modal-close-btn" aria-label="닫기"><i class="fa-solid fa-xmark"></i></button>
+      
+      <div class="modal-header">
+        <div class="modal-brand">D'ART ARCHIVE CONSULTATION</div>
+        <h3 class="modal-title">프라이빗 상담 예약</h3>
+        <div class="title-underline-small"></div>
+        <p class="modal-intro">
+          고객님께서 작성해 주신 소중한 기록은 단 하루의 예식을 넘어, 두 사람만을 위한 완벽한 예술작품(Masterpiece)을 빚어내는 밑그림이 됩니다. 제공해주신 상세한 정보를 토대로 보다 깊이 있는 프라이빗 컨설팅을 준비하겠습니다.
+        </p>
+      </div>
+      
+      <form id="bookingForm" class="modal-form elegant-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bookGroomName">신랑 성함</label>
+            <input type="text" id="bookGroomName" placeholder="예: 이민우" required>
+          </div>
+          <div class="form-group">
+            <label for="bookBrideName">신부 성함</label>
+            <input type="text" id="bookBrideName" placeholder="예: 김지아" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bookContact">연락처</label>
+            <input type="tel" id="bookContact" placeholder="010-0000-0000" pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}" required>
+          </div>
+          <div class="form-group">
+            <label for="bookDate">예식 희망일</label>
+            <input type="date" id="bookDate" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bookGuests">예상 하객 수 (명)</label>
+            <input type="number" id="bookGuests" placeholder="예: 300" min="50" max="1500" required>
+          </div>
+          <div class="form-group">
+            <label for="bookTime">방문 희망 상담 시간</label>
+            <select id="bookTime" required>
+              <option value="" disabled selected>방문 희망 시간을 선택해 주세요</option>
+              <option value="10:00">오전 10:00</option>
+              <option value="11:30">오전 11:30</option>
+              <option value="13:00">오후 01:00</option>
+              <option value="14:30">오후 02:30</option>
+              <option value="16:00">오후 04:00</option>
+              <option value="17:30">오후 05:30</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>방문 경로 (중복 선택 가능)</label>
+          <div class="checkbox-grid">
+            <label class="checkbox-label">
+              <input type="checkbox" name="visitPath" value="instagram">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">인스타그램 (Instagram)</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="visitPath" value="blog">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">네이버 블로그 / 카페</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="visitPath" value="friend">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">지인 소개 및 추천</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="visitPath" value="walkin">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">엔터식스 쇼핑몰 방문/워크인</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="visitPath" value="planner">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">웨딩 제휴 플래너</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="visitPath" value="outdoor">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">옥외 및 기타 지면 광고</span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-premium w-full py-4 mt-4">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>프라이빗 상담 신청 완료하기</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Simulated Success Dialog -->
+  <div id="successDialog" class="modal-wrapper">
+    <div class="modal-overlay" id="successOverlay"></div>
+    <div class="modal-container dialog-container glass-card text-center">
+      <div class="success-icon pulsing-ring">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3 class="dialog-title">상담 예약 신청 완료</h3>
+      <p class="dialog-desc" id="successMessage">
+        예약 신청이 접수되었습니다.
+      </p>
+      <div class="dialog-card" id="successDetailCard">
+        <!-- Will be dynamically populated with reservation info -->
+      </div>
+      <button id="closeSuccessBtn" class="btn-filled mt-4 w-full py-3">확인</button>
+    </div>
+  </div>
+
+  <!-- Custom JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
