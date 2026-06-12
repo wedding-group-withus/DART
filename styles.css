@@ -1967,6 +1967,10 @@ input[type="range"]::-moz-range-thumb:hover {
   .nav-menu {
     display: none;
   }
+
+  #openBookingBtn {
+    display: none !important; /* Hide redundant/awkward header button on mobile/tablets */
+  }
   
   .hamburger-menu {
     display: flex;
@@ -2065,20 +2069,31 @@ input[type="range"]::-moz-range-thumb:hover {
     right: 16px;
     bottom: auto;
     width: auto;
-    height: auto;
-    padding: 7px 12px;
-    border-radius: 20px;
-    animation: twinkle 2s infinite ease-in-out;
+    height: 38px; /* Fixed height for absolute vertical alignment */
+    padding: 0 16px; /* Balanced horizontal padding */
+    border-radius: 19px; /* Smooth pill shape */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    animation: twinkle 2.5s infinite ease-in-out;
+  }
+
+  .floating-booking-btn i {
+    font-size: 0.85rem;
+    color: #0A0A0A;
   }
   
   @keyframes twinkle {
-    0%, 100% { box-shadow: 0 0 5px var(--color-bronze); }
-    50% { box-shadow: 0 0 15px var(--color-bronze); }
+    0%, 100% { box-shadow: 0 0 8px rgba(190, 161, 124, 0.4); }
+    50% { box-shadow: 0 0 18px rgba(190, 161, 124, 0.8); }
   }
   
   .floating-btn-text {
-    display: inline; /* Keep text visible on mobile for clarity */
-    font-size: 0.74rem;
+    display: inline-block; /* Keep text visible on mobile for clarity */
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1; /* Prevents text from shifting vertically */
   }
   
   .footer-bottom {
