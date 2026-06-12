@@ -1725,34 +1725,55 @@ input[type="range"]::-moz-range-thumb:hover {
    -------------------------------------------------------------------------- */
 .floating-booking-btn {
   position: fixed;
-  bottom: 32px;
-  right: 32px;
-  background: linear-gradient(135deg, var(--color-bronze), var(--color-bronze-hover));
-  color: #FAF6EB;
-  border-radius: 50px;
-  padding: 16px 28px;
+  top: 100px; /* Positioned elegantly below the 80px navbar */
+  right: 24px;
+  bottom: auto;
+  background: radial-gradient(circle, #FAF6EB 0%, var(--color-bronze) 60%, var(--color-bronze-hover) 100%);
+  color: #0A0A0A !important; /* Fixed dark text for perfect contrast on glow */
+  border-radius: 30px;
+  padding: 10px 18px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   cursor: pointer;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
   z-index: 999;
+  border: 1px solid rgba(250, 246, 235, 0.4);
+  box-shadow: 0 0 12px rgba(190, 161, 124, 0.4), inset 0 0 8px rgba(255, 255, 255, 0.8);
+  animation: starTwinkle 3.5s infinite ease-in-out;
   transition: var(--transition-smooth);
 }
 
 .floating-booking-btn:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 12px 35px rgba(var(--bronze-rgb), 0.4);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 25px rgba(250, 246, 235, 0.9), 0 0 15px rgba(190, 161, 124, 0.7);
 }
 
 .floating-booking-btn i {
-  font-size: 1.2rem;
+  font-size: 0.95rem;
+  color: #0A0A0A;
+  animation: pulseStar 2s infinite alternate ease-in-out;
 }
 
 .floating-btn-text {
-  font-weight: 600;
-  font-size: 0.9rem;
+  font-weight: 700;
+  font-size: 0.82rem;
   letter-spacing: 0.05em;
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(190, 161, 124, 0.3), inset 0 0 5px rgba(255, 255, 255, 0.4);
+    filter: brightness(0.95);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(250, 246, 235, 0.95), 0 0 12px rgba(190, 161, 124, 0.8), inset 0 0 10px rgba(255, 255, 255, 0.9);
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes pulseStar {
+  0% { transform: scale(0.9) rotate(0deg); }
+  100% { transform: scale(1.2) rotate(25deg); }
 }
 
 /* --------------------------------------------------------------------------
@@ -2040,17 +2061,24 @@ input[type="range"]::-moz-range-thumb:hover {
   }
   
   .floating-booking-btn {
-    bottom: 24px;
-    right: 24px;
-    padding: 0;
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-    justify-content: center;
+    top: 86px; /* Positioned below the 70px mobile header navbar */
+    right: 16px;
+    bottom: auto;
+    width: auto;
+    height: auto;
+    padding: 7px 12px;
+    border-radius: 20px;
+    animation: twinkle 2s infinite ease-in-out;
+  }
+  
+  @keyframes twinkle {
+    0%, 100% { box-shadow: 0 0 5px var(--color-bronze); }
+    50% { box-shadow: 0 0 15px var(--color-bronze); }
   }
   
   .floating-btn-text {
-    display: none; /* Only show icon on extra small screens to save space */
+    display: inline; /* Keep text visible on mobile for clarity */
+    font-size: 0.74rem;
   }
   
   .footer-bottom {
